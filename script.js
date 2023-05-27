@@ -87,10 +87,11 @@ function validateForm(event) {
     }, 3000);
     
   }
-if(window.origin+"/profile.html"==window.location.href){
-    showDataInDiv();
-    
-}
+var currentUrl = window.location.href;
+if (currentUrl.indexOf('index.html') !== -1 && localStorage.getItem('token')) {
+    showDataInDiv(); 
+  }
+
 //   logout
 logout.addEventListener("click",()=>{
     
