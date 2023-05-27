@@ -3,6 +3,7 @@ function checkAccessToken() {
     
     if (currentUrl.indexOf('index.html') !== -1 && localStorage.getItem('token')) {
       window.location.href = 'profile.html'; 
+      showDataInDiv();
     } else if (currentUrl.indexOf('profile.html') !== -1 && !localStorage.getItem('token')) {
         window.location.href = 'index.html'; 
     }
@@ -76,6 +77,7 @@ function validateForm(event) {
     saveDataToLocalStorage("token",randomToken);
 
     loadUrl("./profile.html");
+    showDataInDiv();
     
   }
 
@@ -87,20 +89,17 @@ function validateForm(event) {
     }, 3000);
     
   }
-var currentUrl = window.location.href;
-if (currentUrl.indexOf('index.html') !== -1 && localStorage.getItem('token')) {
-    showDataInDiv(); 
-  }
+
 
 //   logout
-logout.addEventListener("click",()=>{
+logout(){
     
     localStorage.removeItem("name");
     localStorage.removeItem("email");
     localStorage.removeItem("password");
     localStorage.removeItem("token");
     loadUrl("./index.html");
-})
+}
     
 
 
