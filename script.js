@@ -79,14 +79,16 @@ function validateForm(event) {
     }, 3000);
     
   }
-
+if(window.origin+"/profile.html"==window.location.href){
     showDataInDiv();
-    
     //   logout
     logout.addEventListener("click",()=>{
         localStorage.clear();
         loadUrl("./index.html");
     })
+
+}
+    
 
 
 
