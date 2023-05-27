@@ -1,11 +1,15 @@
 
 if(getDataFromLocalStorage("token")==null){
-    if(window.origin+"/index.html"!=window.location.href)
-     loadUrl("./index.html");
+    console.log(window.origin+"/index.html",window.location.href)
+    if(window.origin+"/index.html"!=window.location.href){
+        loadUrl("./index.html");
+    }
 }else{
     console.log(window.origin+"/profile.html"!=window.location.href)
-    if(window.origin+"/profile.html"!=window.location.href)
-     loadUrl("./profile.html");
+
+    if(window.origin+"/profile.html",window.location.href){
+        loadUrl("./profile.html");
+    }
 }
 
 function validateForm(event) {
