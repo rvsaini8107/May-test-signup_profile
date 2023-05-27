@@ -1,18 +1,18 @@
+function checkAccessToken() {
+    var currentUrl = window.location.href;
+    
+    if (currentUrl.indexOf('index.html') !== -1 && localStorage.getItem('token')) {
+      window.location.href = 'profile.html'; 
+    } else if (currentUrl.indexOf('profile.html') !== -1 && !localStorage.getItem('token')) {
+        window.location.href = 'index.html'; 
+    }
+ }
+        
+        
+        
+// Check access token on page load
 window.onload = function() {
-    if(getDataFromLocalStorage("token")==null){
-       console.log(window.origin+"/May-test-signup_profile/index.html",window.location.href)
-       console.log(window.origin+"/May-test-signup_profile/index.html"!=window.location.href)
-       if(window.origin+"/May-test-signup_profile/index.html"!=window.location.href){
-          // loadUrl("./index.html");
-       }
-   }else{
-      console.log(window.origin+"/May-test-signup_profile/profile.html"!=window.location.href)
-      console.log(window.origin+"/May-test-signup_profile/profile.html",window.location.href)
-   
-       if(window.origin+"/May-test-signup_profile/profile.html",window.location.href){
-          // loadUrl("./profile.html");
-       }
-   }
+checkAccessToken();
 };
 
 
