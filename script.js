@@ -77,7 +77,7 @@ function validateForm(event) {
     saveDataToLocalStorage("token",randomToken);
 
     loadUrl("./profile.html");
-    showDataInDiv();
+   
     
   }
 
@@ -90,45 +90,12 @@ function validateForm(event) {
     
   }
 
-
-//   logout
-logout(){
-    
-    localStorage.removeItem("name");
-    localStorage.removeItem("email");
-    localStorage.removeItem("password");
-    localStorage.removeItem("token");
-    loadUrl("./index.html");
-}
-    
-
-
-
   function saveDataToLocalStorage(key, value) {
     localStorage.setItem(key, value);
   }
   
-  // Retrieving data from local storage
-  function getDataFromLocalStorage(key) {
-    var value = localStorage.getItem(key);
-    return value ? value : null;
-  }
   
-
-  function showDataInDiv(){
-
-    var nameShow = getDataFromLocalStorage("name")
-    var emailShow = getDataFromLocalStorage("email")
-    var passShow = getDataFromLocalStorage("password")
-    // getDataFromLocalStorage("token")
-    var div = `<div>Full Name : <span id="show-name">${nameShow}</span></div>
-    <div>Email : <span id="show-email">${emailShow}</span></div>
-    <div>Password : <span id="show-password">${passShow}</span></div>` ;
-    var showAllData = document.getElementById('show-all-data');
-    showAllData.innerHTML=div;
-  }
-
-
+  
   function generateRandomToken() {
     var randomBytes = new Uint8Array(16);
     crypto.getRandomValues(randomBytes);
@@ -139,4 +106,3 @@ logout(){
     
     return token;
   }
-  

@@ -87,7 +87,7 @@ header {
     font-size: large;
   }
   #show-all-data {
-    width: 35%;
+    
     display: flex;
     flex-direction: column;
     gap: 20px;
