@@ -1,6 +1,6 @@
 
 // if(getDataFromLocalStorage("token")==null){
-//     console.log(window.origin+"/index.html",window.location.href)
+    console.log(window.origin+"/index.html",window.location.href)
 //     if(window.origin+"/index.html"!=window.location.href){
 //         loadUrl("./index.html");
 //     }
