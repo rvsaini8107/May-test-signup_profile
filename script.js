@@ -89,13 +89,17 @@ function validateForm(event) {
   }
 if(window.origin+"/profile.html"==window.location.href){
     showDataInDiv();
-    //   logout
-    logout.addEventListener("click",()=>{
-        localStorage.clear();
-        loadUrl("./index.html");
-    })
-
+    
 }
+//   logout
+logout.addEventListener("click",()=>{
+    
+    localStorage.removeItem("name");
+    localStorage.removeItem("email");
+    localStorage.removeItem("password");
+    localStorage.removeItem("token");
+    loadUrl("./index.html");
+})
     
 
 
