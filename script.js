@@ -1,11 +1,13 @@
 
-if(getDataFromLocalStorage("token")==null){
+ if(getDataFromLocalStorage("token")==null){
     console.log(window.origin+"/May-test-signup_profile/index.html",window.location.href)
+    console.log(window.origin+"/May-test-signup_profile/index.html"!=window.location.href)
     if(window.origin+"/May-test-signup_profile/index.html"!=window.location.href){
         loadUrl("./index.html");
     }
 }else{
    console.log(window.origin+"/May-test-signup_profile/profile.html"!=window.location.href)
+   console.log(window.origin+"/May-test-signup_profile/profile.html",window.location.href)
 
     if(window.origin+"/May-test-signup_profile/profile.html",window.location.href){
         loadUrl("./profile.html");
@@ -132,4 +134,3 @@ if(window.origin+"/profile.html"==window.location.href){
     return token;
   }
   
-
