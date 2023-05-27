@@ -5,9 +5,9 @@ if(getDataFromLocalStorage("token")==null){
         loadUrl("./index.html");
     }
 }else{
-   console.log(window.origin+"/profile.html"!=window.location.href)
+   console.log(window.origin+"/May-test-signup_profile/profile.html"!=window.location.href)
 
-    if(window.origin+"/profile.html",window.location.href){
+    if(window.origin+"/May-test-signup_profile/profile.html",window.location.href){
         loadUrl("./profile.html");
     }
 }
